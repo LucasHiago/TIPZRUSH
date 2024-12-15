@@ -55,7 +55,7 @@ const getRandomEmoji = (emojiKey = contextEmojiKey) => {
 }
 
 const updatePlayerValues = (GAIN = 0) => {
-  creditEl.innerHTML = credit;
+  creditEl.innerHTML = credit.toFixed(2);
 
   if(GAIN > 0) {
     gain = GAIN;
@@ -446,7 +446,7 @@ const showBalloon = (iconValue, multipliers, bet = false, betvalue = 0) => {
       // Cria o elemento do balão
       const balloon = document.createElement('div');
       balloon.classList.add('balloon');
-      balloon.textContent = `+ R$ ${realValue.toFixed(2)}`;
+      balloon.innerHTML = `<span class="float-multiplier"> R$${iconValue} <small> x ${sumMultipliers}</small> </span> R$ ${realValue.toFixed(2)}`;
   
       // Adiciona o balão ao container
       balloonContainer.appendChild(balloon);
