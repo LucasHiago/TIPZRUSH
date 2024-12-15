@@ -1,0 +1,17 @@
+{
+  "name": "tipzrush",
+  "version": "1.0.0",
+  "description": "A PURE JAVASCRIPT SLOT GAME",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "svgstore": "^3.0.1",
+    "xml-formatter": "^3.6.3",
+    "xmldom": "^0.6.0"
+  }
+}

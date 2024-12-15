@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipz Rush</title>
+  <link rel="stylesheet" href="assets/font/font-Mighty.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="baloon.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+  <link rel="icon" type="image/png" href="./tipz.png" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>Emotes Slot</h1>
+    <div class="reel-container"></div>
+    <div class="status">
+      <div class="balance-info">
+        <div class="confirm-removal hidden">
+          <button id="confirmButton">Remover Conexões</button>
+        </div> 
+        <div class="info">
+          <label>
+            Saldo
+          </label>
+          <span class="credit">2000</span>
+        </div>
+        <div class="info">
+          <label>
+            Aposta
+          </label>
+          <span class="bet">10</span>
+        </div>
+        <div class="info">
+          <label>
+            Ganho (rodada)
+          </label>
+          <span class="gain"></span>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="spin">
+          <i class="fi fi-ss-refresh"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal hidden win-message">
+    <div class="modal-content">
+      <p class="win-info"></p>
+      <p class="win-text"></p>
+      <button class="close-message">
+        jogar
+        <i class="fi fi-ss-fire-flame-curved"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="balloon-container"></div>
+
+  <audio controls autoplay class="song_controller">
+    <!-- <source src="assets/song/gummy.mp3" type="audio/mpeg"> -->
+  </audio>
+
+  <script>
+    fetch('./assets/emojis/sprite.svg')
+    .then(res => res.text())
+    .then(data => {
+      const div = document.createElement('div');
+      div.style.display = 'none';
+      div.innerHTML = data;
+      document.body.insertBefore(div, document.body.firstChild);
+    });
+  </script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
